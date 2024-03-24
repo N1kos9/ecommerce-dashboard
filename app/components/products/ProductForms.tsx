@@ -50,7 +50,7 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
 
   const getCollections = async () => {
     try {
-      const res = await fetch("/api/collections", {
+      const res = await fetch("/api/collections/", {
         method: "GET",
       });
       const data = await res.json();

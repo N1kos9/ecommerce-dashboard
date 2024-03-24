@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       payment_method_types: ["card"],
       mode: "payment",
       shipping_address_collection: {
-        allowed_countries: ["US", "CA"],
+        allowed_countries: ["US", "RO"],
       },
       shipping_options: [
         { shipping_rate: "shr_1OxZ9Z02qyjIEnytWCUq092v" },
@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
       ],
       line_items: cartItems.map((cartItem: any) => ({
         price_data: {
-          currency: "cad",
+          currency: "RON",
           product_data: {
             name: cartItem.item.title,
             metadata: {
